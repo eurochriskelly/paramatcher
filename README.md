@@ -9,19 +9,27 @@ rules. For example, checking that all required parameters exist in the
 expected combination.
 
 ## Basic Usage:
+### Installation 
+
+```
+npm install paramatcher
+```
 
 ### Import library:
-
+```
 var paramatcher = require('paramatcher');
+```
 
 ### Define match rules (here without conditions):
 
 Build with a string:
 
+```
 var validPassport = paramatcher.build('nationality && (passportNumber || (name && age))');
+```
 
 ### Test against a real a list of parameters
-
+```
 var Bob =  {
     nationality : 'English',
     name : 'Bob',
@@ -37,3 +45,4 @@ var Anon =  {
 };
 
 validPassport.test(Bob); // true
+```

@@ -123,21 +123,14 @@ var Paramatcher = function () {
 		    });
 		    return accept;
 		}
-
 	    }
 	}
-    }
-    
-    function _or (items) {
-	// treat all input as an array
-	return {
-	    $or : items
-	};
     }
     function isKeyword(token) {
 	return ['$or', '$and', '$allow'].indexOf(token);
     }
     function lastIndexOf (n,r,t) {
+    	// borrowed from lodash
 	var e=n?n.length:0;
 	for(typeof t=="number"&&(e=(0>t?Mr(0,e+t):$r(t,e-1))+1);e--;)if(n[e]===r)return e;
 	return-1
@@ -145,7 +138,6 @@ var Paramatcher = function () {
     function _getDefinition () {
 	return definition;
     }
-
 }();
 
 module.exports = Paramatcher;
