@@ -1,15 +1,16 @@
 {
-  "name": "paramatcher",
-  "version": "0.0.1",
-  "description": "Check that expected parameters exist.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha test.js"
-  },
-  "author": "Chris Kelly",
-  "license": "ISC",
-  "devDependencies": {
-    "mocha": "^2.2.5",
-    "should": "^7.0.2"
-  }
+    "name": "paramatcher",
+    "version": "0.0.1",
+    "description": "Check that expected parameters exist.",
+    "main": "index.js",
+    "repository" : "https://github.com/eurochriskelly/paramatcher.git",
+    "scripts": {
+	"test": "mocha test.js"
+    },
+    "author": "Chris Kelly",
+    "license": "ISC",
+    "devDependencies": {
+	"mocha": "^2.2.5",
+	"should": "^7.0.2"
+    }
 }
