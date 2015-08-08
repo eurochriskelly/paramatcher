@@ -9,6 +9,11 @@ rules. For example, checking that all required parameters exist in the
 expected combination.
 
 ## Basic Usage:
+### Installation 
+
+```
+npm install paramatcher
+```
 
 ### Import library:
 ```
