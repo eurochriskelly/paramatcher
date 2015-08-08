@@ -28,7 +28,7 @@ Build with a string:
 var validPassport = paramatcher.build('nationality && (passportNumber || (name && age))');
 ```
 
-### Test against a real a list of parameters
+### Test against a real list of parameters
 ```
 var Bob =  {
     nationality : 'English',
