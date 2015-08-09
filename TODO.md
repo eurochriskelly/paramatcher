@@ -7,5 +7,7 @@
   e.g.
 
   `var rule = paramatcher.build({ $or : [ { param1 : { $lt : 20, $gt : 5 }}, 'param2']})`
+  
   or
+  
   `var rule = paramatcher.build("name && ? && (year || age)", { param1 : { $lt : 20, $gt : 5 }});`
