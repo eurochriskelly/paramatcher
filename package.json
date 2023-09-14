@@ -1,6 +1,6 @@
 {
   "name": "paramatcher",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Check that expected parameters exist.",
   "main": "index.js",
   "repository": "https://github.com/eurochriskelly/paramatcher.git",

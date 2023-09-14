@@ -1,48 +1,53 @@
-#paramatcher
+# Paramatcher
 
-Description:
+## Overview
 
-A simple object parameter matcher.
+Paramatcher is a simple object validation tool that allows checking object properties using preset boolean rules. For example, it checks that all required parameters exist in the expected combination.
 
-This tool allows checking object properties using preset boolean
-rules. For example, checking that all required parameters exist in the
-expected combination.
+## Installation
 
-## Basic Usage:
-### Installation 
+`npm install paramatcher`
+
+
+## Usage
+
+Import the library and use the `build` function to create a validation object.
+
+### Import library
+
+`const { build } = require('paramatcher');`
+
+### Define Match Rules:
+
+`const validPassport = build('nationality && (passportNumber || (name && age))');`
+
+This rule requires an object to have a `nationality` and either a `passportNumber` or both `name` and `age`.
+
+### Test against a real object
 
 ```
-npm install paramatcher
-```
-
-### Import library:
-```
-var paramatcher = require('paramatcher');
-```
-
-### Define match rules (here without conditions):
-
-Build with a string:
-
-```
-var validPassport = paramatcher.build('nationality && (passportNumber || (name && age))');
-```
-
-### Test against a real list of parameters
-```
-var Bob =  {
+var Bob = {
     nationality : 'English',
     name : 'Bob',
     age : 100
 };
 
-validPassport.test(Bob); // true
+validPassport.test(Bob); // returns true
 
-// don't have personal info but have passport number
-var Anon =  {
+// Don't have personal info but have passport number
+var Anon = {
     nationality : 'English',
     passportNumber : 'GHSJE3423'
 };
 
-validPassport.test(Bob); // true
+validPassport.test(Anon); // returns true
 ```
+
+### Error Handling
+
+The Paramatcher module includes a `warnings` array in the returned instance from `build()`. This array contains any errors or warnings encountered during the parsing and building phase.
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request.
+
