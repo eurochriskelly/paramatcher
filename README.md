@@ -8,7 +8,6 @@ Paramatcher is a simple object validation tool that allows checking object prope
 
 `npm install paramatcher`
 
-
 ## Usage
 
 Import the library and use the `build` function to create a validation object.
